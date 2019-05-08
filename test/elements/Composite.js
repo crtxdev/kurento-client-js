@@ -72,7 +72,7 @@ QUnit.asyncTest('create with Callback', function () {
       QUnit.start();
     });
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
 QUnit.asyncTest('create with Promise', function () {
@@ -86,10 +86,10 @@ QUnit.asyncTest('create with Promise', function () {
 
       QUnit.start();
     }, function(error) {
-         if (error) return onerror(error)
-      });
-  }, function(error) {
       if (error) return onerror(error)
-    })
-  .catch(onerror)
+    });
+  }, function(error) {
+    if (error) return onerror(error)
+  })
+    .catch(onerror)
 });

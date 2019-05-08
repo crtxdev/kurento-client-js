@@ -84,7 +84,7 @@ QUnit.asyncTest('Create pipeline and play video with Callback', function () {
       });
     });
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
 QUnit.asyncTest('Create pipeline and play video with Promise', function () {
@@ -103,18 +103,18 @@ QUnit.asyncTest('Create pipeline and play video with Promise', function () {
         return player.play().then(function () {
           QUnit.start();
         }, function(error) {
-            if (error) return onerror(error)
-          });
-      }, function(error) {
           if (error) return onerror(error)
         });
-    }, function(error) {
+      }, function(error) {
         if (error) return onerror(error)
       });
-  }, function(error) {
+    }, function(error) {
       if (error) return onerror(error)
-    })
-  .catch(onerror)
+    });
+  }, function(error) {
+    if (error) return onerror(error)
+  })
+    .catch(onerror)
 });
 
 QUnit.asyncTest('Detect bar-code in a video with Callback', function () {
@@ -161,7 +161,7 @@ QUnit.asyncTest('Detect bar-code in a video with Callback', function () {
       });
     });
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
 QUnit.asyncTest('Detect bar-code in a video with Promise', function () {
@@ -197,16 +197,16 @@ QUnit.asyncTest('Detect bar-code in a video with Promise', function () {
         return player.play().then(function () {
           timeout.start();
         }, function(error) {
-            if (error) return onerror(error)
-          });
-      }, function(error) {
           if (error) return onerror(error)
         });
-    }, function(error) {
+      }, function(error) {
         if (error) return onerror(error)
       });
-  }, function(error) {
+    }, function(error) {
       if (error) return onerror(error)
-    })
-  .catch(onerror)
+    });
+  }, function(error) {
+    if (error) return onerror(error)
+  })
+    .catch(onerror)
 });

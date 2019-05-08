@@ -54,7 +54,7 @@ QUnit.test('setVideoFormat with Callback', function (assert) {
       done();
     })
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
 QUnit.test('setVideoFormat with Promise', function (assert) {
@@ -81,7 +81,7 @@ QUnit.test('setVideoFormat with Promise', function (assert) {
       done();
     })
   }, function(error) {
-      if (error) return onerror(error)
-    })
-  .catch(onerror)
+    if (error) return onerror(error)
+  })
+    .catch(onerror)
 });

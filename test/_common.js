@@ -262,15 +262,15 @@ lifecycle = {
       this.kurento = new kurentoClient(ws_uri, options);
 
       this.kurento.then(function () {
-          this.create('MediaPipeline', function (error, pipeline) {
-            if (error) return onerror(error);
+        this.create('MediaPipeline', function (error, pipeline) {
+          if (error) return onerror(error);
 
-            self.pipeline = pipeline;
+          self.pipeline = pipeline;
 
-            QUnit.start();
-          });
-        },
-        onerror);
+          QUnit.start();
+        });
+      },
+      onerror);
     } else if (scope == "docker") {
       getIpDocker(function (ip) {
         var hostIp = ip;
@@ -314,17 +314,17 @@ lifecycle = {
                 self.kurento = new kurentoClient(ws_uri,
                   options);
                 self.kurento.then(function () {
-                    this.create('MediaPipeline',
-                      function (error, pipeline) {
-                        if (error) return onerror(
-                          error);
+                  this.create('MediaPipeline',
+                    function (error, pipeline) {
+                      if (error) return onerror(
+                        error);
 
-                        self.pipeline = pipeline;
+                      self.pipeline = pipeline;
 
-                        QUnit.start();
-                      });
-                  },
-                  onerror);
+                      QUnit.start();
+                    });
+                },
+                onerror);
 
               })
             })

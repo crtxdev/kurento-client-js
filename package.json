@@ -47,12 +47,12 @@
     "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com> (https://pirannafs.blogspot.com/)"
   ],
   "bugs": {
-    "url": "https://github.com/Kurento/bugtracker/issues",
+    "url": "https://github.com/crtxdev/kurento-client-js/issues",
     "email": "kurento@googlegroups.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kurento/kurento-client-js.git"
+    "url": "https://github.com/crtxdev/kurento-client-js.git"
   },
   "main": "./lib/index.js",
   "scripts": {
@@ -73,7 +73,7 @@
     "kurento-client-core": "^6.0.0",
     "kurento-client-elements": "^6.0.0",
     "kurento-client-filters": "^6.0.0",
-    "kurento-jsonrpc": "^6.0.0",
+    "kurento-jsonrpc": "crtxdev/kurento-jsonrpc-js#master",
     "promisecallback": "0.0.4",
     "reconnect-ws": "KurentoForks/reconnect-ws#master",
     "minimist": "^1.2.0"

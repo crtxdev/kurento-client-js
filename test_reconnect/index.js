@@ -364,20 +364,20 @@ QUnit.test('MediaServer restarted', function (assert) {
       //container.remove(function (error, data) {
 
       docker.run('kurento/kurento-media-server-dev:latest', [], [
-          process.stdout,
-          process.stderr
-        ], {
-          Tty: false,
-          'PortBindings': {
-            "8888/tcp": [{
-              "HostIp": "",
-              "HostPort": argv.ws_port.toString()
-            }]
-          }
-        },
-        function (err, data, container) {
-          if (err) console.error(err);
-        }).on('container', function (container_) {
+        process.stdout,
+        process.stderr
+      ], {
+        Tty: false,
+        'PortBindings': {
+          "8888/tcp": [{
+            "HostIp": "",
+            "HostPort": argv.ws_port.toString()
+          }]
+        }
+      },
+      function (err, data, container) {
+        if (err) console.error(err);
+      }).on('container', function (container_) {
         container = container_;
         container.inspect(function (err, data) {
           container.inspect(function (err, data) {
@@ -437,9 +437,9 @@ QUnit.test('MediaServer closed, client disconnected', function (assert) {
         assert.notEqual(error, undefined);
 
         assert.throws(function () {
-            client.sessionId
-          },
-          new SyntaxError('Client has been disconnected'));
+          client.sessionId
+        },
+        new SyntaxError('Client has been disconnected'));
 
         done();
       });
@@ -454,9 +454,9 @@ QUnit.test('MediaServer closed, client disconnected', function (assert) {
           assert.notEqual(error, undefined);
 
           assert.throws(function () {
-              client.sessionId
-            },
-            new SyntaxError('Client has been disconnected')
+            client.sessionId
+          },
+          new SyntaxError('Client has been disconnected')
           );
 
           done();

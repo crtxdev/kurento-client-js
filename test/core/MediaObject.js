@@ -45,7 +45,7 @@ QUnit.test('setName with Callback', function (assert) {
       done();
     })
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
 QUnit.test('setName with Promise', function (assert) {
@@ -65,8 +65,8 @@ QUnit.test('setName with Promise', function (assert) {
       if (error) return onerror(error)
     })
   },function(error) {
-      if (error) return onerror(error)
-    })
-  .catch(onerror)
+    if (error) return onerror(error)
+  })
+    .catch(onerror)
 });
 

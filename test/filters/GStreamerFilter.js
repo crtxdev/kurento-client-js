@@ -103,7 +103,7 @@ QUnit.asyncTest('End of Stream with Callback', function () {
       });
     });
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
 QUnit.asyncTest('End of Stream with Promise', function () {
@@ -143,15 +143,15 @@ QUnit.asyncTest('End of Stream with Promise', function () {
         return player.play().then(function (error) {
           timeout.start();
         }, function(error) {
-            if (error) return onerror(error)
-          });
-      }, function(error) {
           if (error) return onerror(error)
         });
-    }, function(error) {
+      }, function(error) {
         if (error) return onerror(error)
       });
+    }, function(error) {
+      if (error) return onerror(error)
+    });
   })
-  .catch(onerror)
+    .catch(onerror)
 });
 
